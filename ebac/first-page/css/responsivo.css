@@ -1,0 +1,26 @@
+/* Notebook Peq*/
+@media (max-width: 1024px){
+    nav{
+        width: 30%;
+        height: 139.1vw;
+    }
+    article{
+        width: 70%;
+        height: 139.1vw;
+    }
+}
+/* Tablet */
+@media (max-width: 768px){
+    nav,article{
+        width: 100%;
+    }    
+}
+
+/* SmartPhone */
+@media (max-width: 425px){
+    nav,article{
+        width: 100%;
+    }
+}
+
+

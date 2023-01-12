@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>HTML - Formulário Fale Conosco</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./css/style-form.css">
+	</head>
+	<body>
+
+		<header>
+			<h2> Curso FullStack - EBAC </h2>
+		</header>
+
+		<section>
+
+			<nav class="menu">
+				<h3>Menu</h3>
+				<ul>
+					<li><a href="01-introducao.html">Introdução</a></li>
+					<li><a href="02-listas-e-links.html">Listas e Links</a></li>
+					<li><a href="03-formatacao-de-texto.html">Formatação de Texto</a></li>
+					<li><a href="05-layouts.html">Layouts</a></li>
+					<li><a href="06-formularios.html">Formulários</a></li>
+					<li><a href="homepage.html">Sobre Mim</a></li>
+					<li><a href="tabelas.html">Tabela - Módulo 07</a></li>
+					<li><a href="contato.html">Contato - Desafio</a></li>
+				</ul>
+				
+			</nav>
+
+			<article>
+
+				<form method="post">
+					<div class="text-form">
+						<h1><strong> - </strong>Formulários</h1>
+						<p>Preencha os campos abaixo:</p>
+					</div>
+
+					<div class="blocos">
+						<label for="nome">Nome</label><br>
+						<input class="text-area" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+					</div>
+
+					<div class="blocos">
+						<label for="email">E-mail</label><br>
+						<input class="text-area" type="email" name="email" id="email" placeholder="Digite seu email">
+					</div>
+
+					<div class="blocos">
+						<label for="mensagem">Mensagem</label><br>
+						<textarea class="text-area" name="mensagem" id="mensagem" rows="5"></textarea>
+					</div>
+
+					<div class="lang-blocks">
+						<p>
+							<label>Qual linguagem você prefere?</label><br>
+							<input type="radio" name="linguagens" value="html"> HTML
+							<input type="radio" name="linguagens" value="css"> CSS
+							<input type="radio" name="linguagens" value="javascript"> JavaScript
+						</p>
+					</div>
+
+					<div class="lang-blocks">
+						<p>
+							<label>Quais linguagens você sabe?</label><br>
+							<input type="checkbox" name="linguagens" value="html"> HTML
+							<input type="checkbox" name="linguagens" value="css"> CSS
+							<input type="checkbox" name="linguagens" value="javascript"> JavaScript
+						</p>
+					</div>
+
+					<div class="lang-blocks">
+						<label>Qual a sua cor favorita?</label><br>
+						<select>
+							<option value="Azul">Azul</option>
+							<option value="Verde">Verde</option>
+							<option value="Vermelho" selected>Vermelho</option>
+						</select>
+					</div>
+
+					<div class="form-botton">
+						<input type="submit" text="OLAA">
+					</div>
+					
+
+				</form>
+
+				
+				
+			</article>
+
+
+		</section>
+
+		<footer>
+			<p>Desenvolvido por Guilherme C.Morais - 2022</p>
+		</footer>
+		
+	</body>
+</html>

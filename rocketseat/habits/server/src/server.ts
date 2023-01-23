@@ -13,6 +13,7 @@ app.register(appRoutes);
 
 app.listen({
     port: 2222,
+    host: '0.0.0.0',
 }).then(() => {
     console.log('http server running in http://localhost:2222')
 })

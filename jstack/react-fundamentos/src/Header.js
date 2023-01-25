@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Header(props) {
+export default function Header({ title, children }) {
     return(
         <>
-            <h1>{props.title}</h1> 
-            {props.children}
+            <h1>{title}</h1> 
+            {children}
             <hr />
         </>
     );

@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Post(props){
+function Post({ media, postagem }){
     return(
         <>
             <article>
-                <strong>{props.post.title}</strong><br/>
-                <small>{props.post.subtitle}</small>
+                <strong>{postagem.title}</strong><br/>
+                <small>{postagem.subtitle}</small>
                 <br />
-                Valor: {props.media /2}
+                <p>Likes: {media /2}</p>
             </article>
             <br />
         </>
@@ -18,7 +18,7 @@ function Post(props){
 // TIPAGEM 
 Post.propTypes = {
     media: PropTypes.number.isRequired,
-    post: PropTypes.shape({
+    postagem: PropTypes.shape({
         title: PropTypes.string.isRequired,
         subtitle: PropTypes.string.isRequired,
     }).isRequired,

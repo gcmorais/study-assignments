@@ -1,35 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import Post from './Post';
 import Header from './Header';
 
 function App() {
+  const [ posts, setPosts ] = useState([
+    { title: 'Titulo #1', subtitle: 'Sub #1', likes: 10 }
+  ]);
+
+  //  posts vai armazenar a informaçao que o componente vai renderizar novamente.
+  //  setPosts é a função que vai fazer a alteração dos dados.
+
+  function handleRefresh(){
+    setPosts((prevState) => [ 
+      ...prevState, 
+      { 
+        title: `Titulo #${prevState.length + 1}`, 
+        subtitle: `subtitle #${prevState.length + 1}`, 
+        likes: 50 
+      }
+    ])
+  }
+
     return(
         <>
           <Header title = "Uva é muito ruim">
-            <h2>Uma descrição bem legal</h2>  
+            <h2>
+              Uma descrição bem legal
+              <button onClick={handleRefresh}>Refresh</button>
+            </h2>
           </Header>
-         
-          <Post 
-            media = {20}
-            post = {{
-              title: "uma verdade 01",
-              subtitle: "goiaba é bom demais 01",
-            }}
-          />
-          <Post 
-            media = {40}
-            post = {{
-              title: "uma verdade 02",
-              subtitle: "goiaba é bom demais 02",
-            }}
-          />
-          <Post 
-            media={60}
-            post = {{
-              title: "uma verdade 03",
-              subtitle: "goiaba é bom demais 03",
-            }}
-          />
+
+          {posts.map(post => (
+            <Post 
+              key={post.title}
+              media={post.likes}
+              postagem={{
+                title: post.title,
+                subtitle: post.subtitle,
+              }}
+            />
+          ))}
+
         </>
     );
 }

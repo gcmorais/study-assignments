@@ -1,2 +1,2 @@
-# ebac-tasks
-Exercícios referentes ao curso proposto pela EBAC.
+# tasks
+Repository to archive my studies in languages ​​and technologies.

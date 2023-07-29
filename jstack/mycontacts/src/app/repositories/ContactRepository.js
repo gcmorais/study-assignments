@@ -53,7 +53,7 @@ class ContactRepository {
         name,
         email,
         phone,
-        category_id: v4(),
+        category_id,
       };
       contacts.push(newContact);
       resolve(newContact);
@@ -69,7 +69,7 @@ class ContactRepository {
         name,
         email,
         phone,
-        category_id: v4(),
+        category_id,
       };
       contacts = contacts.map((contact) => (
         contact.id === id ? updateContact : contact

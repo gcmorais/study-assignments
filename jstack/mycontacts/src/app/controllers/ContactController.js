@@ -55,6 +55,7 @@ class ContactController {
       name,
       email,
       phone,
+      category_id,
     } = request.body;
 
     const contactExists = await ContactRepository.findById(id);
@@ -85,6 +86,7 @@ class ContactController {
       name,
       email,
       phone,
+      category_id,
     });
 
     response.json(contacts);
@@ -92,11 +94,6 @@ class ContactController {
 
   async delete(request, response) {
     const { id } = request.params;
-    const contacts = await ContactRepository.findById(id);
-
-    if (!contacts) {
-      return response.status(404).json({ error: 'user not found' });
-    }
 
     await ContactRepository.delete(id);
     response.status(200).json({ sucess: 'user deleted' });

@@ -3,7 +3,8 @@ const ContactRepository = require('../repositories/ContactRepository');
 
 class ContactController {
   async index(request, response) {
-    const contacts = await ContactRepository.findAll();
+    const { orderBy } = request.query;
+    const contacts = await ContactRepository.findAll(orderBy);
     response.json(contacts);
   }
 
@@ -23,6 +24,7 @@ class ContactController {
       name,
       email,
       phone,
+      category_id,
     } = request.body;
 
     const contactExists = await ContactRepository.findByEmail(email);
@@ -43,12 +45,13 @@ class ContactController {
       name,
       email,
       phone,
+      category_id,
     });
 
     response.json(contacts);
   }
 
-  async upgrade(request, response) {
+  async update(request, response) {
     const { id } = request.params;
 
     const {

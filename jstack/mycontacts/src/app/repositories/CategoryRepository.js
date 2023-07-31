@@ -3,7 +3,11 @@ const db = require('../../database/index');
 class CategoryRepository {
   async findAll(orderBy = 'ASC') {
     const position = orderBy.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
-    const rows = await db.query(`SELECT * FROM categories ORDER BY name ${position}`);
+    const rows = await db.query(`
+        SELECT *
+        FROM categories
+        ORDER BY name ${position}
+    `);
     return rows;
   }
 

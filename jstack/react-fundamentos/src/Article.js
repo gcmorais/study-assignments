@@ -5,7 +5,10 @@ export function Article(props){
     return (
         <>
             <article>
-                <h3>{props.post.title}</h3>
+                
+                <h3>{props.post.title}
+                <button onClick={() => props.onRemove(props.post.id)} name="button">Remover</button>
+                </h3>
                 <small>{props.post.subtitle}</small>
                 <br/>
                 Média:{props.likes /2}
@@ -17,7 +20,9 @@ export function Article(props){
 
 Article.propTypes = {
     likes: PropTypes.number.isRequired,
+    onRemove: PropTypes.func.isRequired,
     post: PropTypes.shape({
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
         subtitle: PropTypes.string.isRequired,
     }).isRequired,

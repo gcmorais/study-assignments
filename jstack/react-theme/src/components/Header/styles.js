@@ -16,4 +16,17 @@ export const Container = styled.header`
     background: transparent;
     border: none;
   }
+  nav ul li {
+    list-style: none;
+
+    a{
+      color: white;
+      text-decoration: none;
+      
+      & + a{
+        margin-left: 16px;
+      }
+    }
+    
+  }
 `;

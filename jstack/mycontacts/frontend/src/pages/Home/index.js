@@ -5,13 +5,14 @@ import edit from '../../assets/images/icons/edit.svg';
 import trash from '../../assets/images/icons/trash.svg';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Modal from '../../components/Modal'
+import Loader from '../../components/Loader';
 
 
 
 function Home() {
   return (
     <Container>
-      <Modal danger />
+
       <InputSearchContainer>
         <input type="text" placeholder="Pesquise pelo nome...."/>
       </InputSearchContainer>

@@ -27,6 +27,7 @@ function ContactForm({btnLabel}) {
         (error) => error.field !== 'name',
       ));
     }
+
   }
 
   function handlePhoneChange(event){

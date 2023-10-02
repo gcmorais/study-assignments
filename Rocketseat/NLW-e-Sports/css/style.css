@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(../assets/background.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+/* header */
+header {
+    margin-top: 2rem;
+    overflow: hidden;
+    height: 10rem;
+}
+header img {
+    border-radius: 50%;
+    width: 120px;
+    display: flex;
+    margin: 0 auto;
+    padding: 4px;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+}
+header div{
+    height: 20rem;
+    margin-top: 2rem;
+    transition: transform .3s;
+}
+header div:hover{
+    transform: scale(1.2);
+}
+
+/* Section Jogos */
+#jogos-area{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    width: 30%;
+    min-width: 20rem;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+.jogos-conteudo{
+    padding: 20px;
+    width: 100%;
+    background-color: #2a2634;
+    
+}
+.jogos-conteudo h2{
+    color: white;
+    font-size: 24px;
+    line-height: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.jogos-conteudo p{
+    color: #74737e;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+.jogos-conteudo img{
+    width: 90px;
+    height: 120px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    margin-right: 0.8rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+.jogos-conteudo img:hover{
+    transform: scale(1.2);
+}
+
+
+/* Section Canais / Streamers */
+
+#canais-streamers{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    width: 30%;
+    min-width: 20rem;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+.canais-conteudo{
+    padding: 20px;
+    width: 100%;
+    background-color: #2a2634;
+}
+.canais-conteudo h2{
+    color: white;
+    font-size: 24px;
+    line-height: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.canais-conteudo p{
+    color: #74737e;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+.canais-conteudo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-right: 0.7rem;
+    cursor: pointer;
+    border: 1px solid #443E54;
+    transition: transform .3s;
+}
+.canais-conteudo img:hover{
+    transform: scale(1.2);
+}
+
+/* Section Minhas redes */
+
+#redes-sociais{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    width: 30%;
+    min-width: 20rem;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+}
+.redes-conteudo{
+    padding: 20px;
+    width: 100%;
+    background-color: #2a2634;
+}
+.redes-conteudo h2{
+    color: white;
+    font-size: 24px;
+    line-height: 2rem;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.redes-conteudo p{
+    color: #74737e;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+}
+.redes-conteudo img{
+    width: 30px;
+    height: 32px;
+    border-radius: 50%;
+    margin-top: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform .3s;
+}
+.redes-conteudo img:hover{
+    transform: scale(1.5);
+}
+
+/* animation */
+
+header div{
+    animation: fromTop .5s .2s backwards;
+    animation-delay: .3s;
+}
+@keyframes fromTop {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+main section{
+    animation: fromBottom .9s .1s backwards;
+}
+@keyframes fromBottom {
+    0%{
+        opacity: 0.1;
+        transform: translateY(30px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+main section:nth-child(3){
+    animation-delay: .7s;
+}
+
+/* Media Query */
+
+@media(max-width:1202px ){
+    .jogos-conteudo img{
+        margin-left: 1.5rem;
+    }
+}

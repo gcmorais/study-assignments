@@ -1,0 +1,109 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    overflow-y: hidden;
+}
+img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+section{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.modal-project{
+   display: flex;
+   flex-flow: column;
+   background-color: #ffffff;
+   align-items: center;
+   justify-content: center;
+   padding: 5rem;
+   border-radius: 20px;
+   box-shadow: 0px 0px 4px #bfbfbf;
+}
+.modal-project h1{
+    padding: 1rem;
+    letter-spacing: 4px;
+    font-size:60px;
+    font-family: sans-serif;
+    color: #102a42;
+}
+button{
+    letter-spacing: 4px;
+    padding: 0.8rem;
+    border: 2px solid #00aaff;
+    box-shadow: 0px 0px 10px rgb(204, 204, 204);
+    background-color: #00aaff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    transition-duration: .5s;
+    background-color: #fff;
+    border: 2px solid #00aaff;
+    color: #00aaff;
+}
+
+/* Modal Class */
+.modal-sect{
+    background-color: rgba(27, 27, 27, 0.8);
+}
+.modal {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 30%;
+    font-size: 40px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    color: #102a42;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #bfbfbf;
+}
+.exit-modal{
+    display: flex;
+    position: absolute;
+    right: 1%;
+    top: 0%;
+    background: none;
+    color: red;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 600;
+    box-shadow: none;
+    border: none;
+}
+.exit-modal:hover{
+    color: red;
+    transition-duration: .5s;
+    border: none;
+    background-color: #d1d1d1;
+    border-radius: 100%;
+    font-size: 25px;
+}
+
+@media (max-width: 640px){
+    .modal-project h1{
+        font-size: 35px;
+    }
+
+}
+@media (max-width: 1154px){
+    .modal{
+        font-size: 35px;
+        width: 30rem;
+    }
+}

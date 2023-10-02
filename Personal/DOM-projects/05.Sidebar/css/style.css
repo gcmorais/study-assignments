@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #241b2f;
+    overflow-y: hidden;
+}
+header{
+    width: 100%;
+    background-color: #262335;
+    box-shadow: 0px 0px 10px black;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #ffffff;
+    margin: 5px;
+    cursor: pointer;
+}
+.mobile-menu {
+    padding: 0.6rem;
+    display: grid;
+    justify-content: end;
+}
+section{
+    background-color: #262335;
+    display: flex;
+    width: 500px;
+    height: 100vh;
+}
+ul li{
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    width: 28.3rem;
+    font-size: 25px;
+}
+ul li:hover{
+    background-color:#a195e0;
+}
+.menu{
+    transform: translateX(-100%);
+}
+.menu.active{
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
+}
+h1{
+    color: white;
+    letter-spacing: 10px;
+    padding: 1rem;
+    font-family: sans-serif;
+    font-size: 30px;
+    text-shadow: 1px 6px 13px black;
+}
+h1 strong{
+    color: #5555ff;
+}
+.headerMenu{
+    display: flex;
+    justify-content: space-between;
+}
+.headerMenu button{
+    width: 10%;
+    font-size: 20px;
+    color: red;
+    background: none;
+    font-family: sans-serif;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    font-size: 40px;
+}
+
+.main-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-text h1{
+    align-items: center;
+}
+.social-icons{
+    display: flex;
+    
+}

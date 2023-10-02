@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.conteudo{
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    color: white;
+    background-color: #262335;
+}
+h1{
+    color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+    font-family: sans-serif;
+}
+#lista-area{
+    padding: 2%;
+    background-color: #241b2f;
+    width: 60%;
+    min-height: 55rem;
+    margin: 0 auto;
+    box-shadow: 0px 0px 9px #1c0c1a;
+}
+.btn-text{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    height: 4rem;
+}
+.btn-text input{
+    width: 70%;
+    padding: 1rem;
+    background-color: #262335;
+    border:none;
+    color: white;
+}
+.btn-text button{
+    width: 20%;
+    background-color: #008001;
+    color: rgb(177, 177, 177);
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px black;
+    border:none;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.item{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #262335;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0px 0px 15px #000000;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+.item.clicado{
+    background: #d3f6d9;
+}
+.item.clicado .item-nome{
+    text-decoration: line-through;
+    color: #353535;
+}
+.item-icone{
+    flex: 3%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.item-nome{
+    height: 100%;
+    padding-top: 1.6rem;
+    flex: 55%;   
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.item-botao{
+    flex: 25%;
+    
+}
+.delete{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mdi-check-circle{
+    color: #008001;
+}

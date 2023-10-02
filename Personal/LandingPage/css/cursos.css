@@ -1,0 +1,74 @@
+#cursos{
+    width: 100%;
+    background-color: white;
+    padding: 2rem;
+}
+.cursos-header h1{
+    text-align: left;
+    padding-top: 2rem;
+    color: #555456;
+    font-size: 3rem;
+    text-shadow: 0px 0px 1px black;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 500;
+}
+.cursos-header h2{
+    text-align: left;
+    padding-top: 1rem;
+    color: rgb(85, 85, 85);
+    font-size: 1rem;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.curso-img{
+    padding-top: 5rem;
+}
+.curso-img img{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    margin: 0px auto;
+    box-shadow: 1px 1px 10px #898989;
+    border-radius: 10px;
+}
+.curso-text h1{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #555456;
+    font-size: 1rem;
+    text-shadow: 0px 0px 1px black;
+    font-family:'Open Sans', sans-serif;
+    font-weight: 500;
+}
+.button-area{
+    text-align: center;
+    margin-top: 1rem;
+}
+.next-btn{
+    margin-left: 3rem;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1024px){
+    .project-area img {
+        margin-top: 5rem;
+    }
+    .project-area2 img {
+        margin-top: 5rem;
+    }
+    .project-area3 img {
+        margin-top: 5rem;
+    }
+}
+@media (max-width: 768px) {
+    .curso-img img {
+        width: 75%;
+    }
+}
+@media (max-width: 500px) {
+    .curso-img img {
+        width: 90%;
+    }
+}

@@ -15,7 +15,7 @@ Este repositório é o projeto ProntoCloud da [Escola Britânica das Artes Criat
 
 ## Feedback
 
-Se você tiver algum feedback, por favor me envie nos contatos que estarei disponibilizando no tópico abaixo, conto com sua ajuda :D
+Se você tiver algum feedback, por favor me envie nos contatos que estarei disponibilizando no tópico abaixo, conto com sua ajuda!
 
 
 ## Redes Sociais / Contato

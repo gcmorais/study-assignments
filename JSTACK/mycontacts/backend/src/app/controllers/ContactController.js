@@ -1,3 +1,5 @@
+/* eslint-disable consistent-return */
+/* eslint-disable class-methods-use-this */
 /* eslint-disable camelcase */
 const ContactRepository = require('../repositories/ContactRepository');
 

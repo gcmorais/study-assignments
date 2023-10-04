@@ -3,13 +3,21 @@
         "browser": true,
         "es2021": true
     },
+    "extends":[
+      "plugin:react-hooks/recommended"
+    ],
     "parserOptions": {
-        "ecmaVersion": "latest",
+        "ecmaVersion": 12,
         "sourceType": "module",
         "ecmaFeatures": {
           "jsx": true
         }
     },
+    "plugins": [
+      "react-hooks"
+    ],
     "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
     }
 }

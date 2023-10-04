@@ -1,8 +1,7 @@
 import { styled } from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 32px;
-
+  margin: 32px 0 32px 0;
 `;
 
 export const Header = styled.header`
@@ -10,6 +9,8 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-top: 32px;
+
+
 
   h1{
     font-size: 24px;
@@ -53,6 +54,8 @@ export const ListHeader = styled.header`
       transition: transform .2s ease-in;
     }
   }
+
+
 `;
 
 export const Card = styled.div`

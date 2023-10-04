@@ -1,8 +1,12 @@
 import React from 'react'
 import {Overlay} from './styles'
 import ReactDOM from 'react-dom'
+import PropTypes from 'prop-types'
 
-function Loader() {
+function Loader({isLoading}) {
+  if(!isLoading){
+    return null;
+  }
   return ReactDOM.createPortal(
     <Overlay>
       <div className='loader' />
@@ -12,3 +16,7 @@ function Loader() {
 }
 
 export default Loader
+
+Loader.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+};

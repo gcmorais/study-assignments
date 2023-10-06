@@ -6,10 +6,11 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   display: flex;
-  justify-content: space-between;
+  justify-content: ${({hasError}) => hasError ? 'flex-end' : 'space-between'};
   align-items: center;
   margin-top: 32px;
-
+  border-bottom: 2px solid ${({theme}) => theme.colors.gray[100]};
+  padding-bottom: 16px;
 
 
   h1{
@@ -135,3 +136,21 @@ export const InputSearchContainer = styled.div`
     }
   }
 `;
+
+export const ErrorContainer = styled.div`
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+  align-items: center;
+
+  .details{
+
+    span{
+      display: block;
+      font-size: 22px;
+      font-weight: 700;
+      color: ${({theme}) => theme.colors.danger.main};
+      margin-bottom: 10px;
+    }
+  }
+`

@@ -6,7 +6,7 @@ export const Container = styled.div`
 
 export const Header = styled.header`
   display: flex;
-  justify-content: ${({hasError}) => hasError ? 'flex-end' : 'space-between'};
+  justify-content: ${({justifycontent}) => justifycontent};
   align-items: center;
   margin-top: 32px;
   border-bottom: 2px solid ${({theme}) => theme.colors.gray[100]};
@@ -51,7 +51,7 @@ export const ListHeader = styled.header`
     }
 
     img{
-      transform: ${({orderBy}) => orderBy === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)'};
+      transform: ${({orderby}) => orderby === 'asc' ? 'rotate(180deg)' : 'rotate(0deg)'};
       transition: transform .2s ease-in;
     }
   }
@@ -152,5 +152,35 @@ export const ErrorContainer = styled.div`
       color: ${({theme}) => theme.colors.danger.main};
       margin-bottom: 10px;
     }
+  }
+`
+export const EmptyListContainer = styled.div`
+  margin-top: 16px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+  p{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 8px;
+    color: ${({theme}) => theme.colors.gray[200]};
+
+    strong{
+      color: ${({theme}) => theme.colors.primary.main};
+    }
+  }
+
+`
+export const EmptyFilteredContainer = styled.div`
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+
+  p{
+    font-size: 16px;
+    color: ${({theme}) => theme.colors.gray[200]};
+    word-break: break-word;
   }
 `

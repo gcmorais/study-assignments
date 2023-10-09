@@ -93,7 +93,10 @@ function Home() {
             {filteredSearch.length === 1 ? " contato" : " contatos"}
           </h1>
         )}
-        <Link to="/new">Novo contato</Link>
+        {!isLoading && (
+          <Link to="/new">Novo contato</Link>
+        )}
+
       </Header>
 
       {hasError && (

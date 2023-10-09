@@ -10,7 +10,7 @@ import useErrors from '../../hooks/useErrors'
 import formatPhone from '../../utils/formatPhone'
 import CategoryServices from '../../services/CategoryServices'
 
-function ContactForm({btnLabel}) {
+function ContactForm({btnLabel, onSubmit}) {
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
   const [phone,setPhone] = useState('');
@@ -74,8 +74,9 @@ function ContactForm({btnLabel}) {
 
   function handleSubmit(event){
     event.preventDefault();
-
-    console.log({name,email,phone,category});
+    onSubmit({
+      name,email,phone,categoryId
+    });
   }
 
   return (
@@ -143,4 +144,5 @@ export default ContactForm
 
 ContactForm.propTypes = {
   btnLabel: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };

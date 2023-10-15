@@ -19,6 +19,8 @@ import ContactServices from "../../services/ContactServices";
 import Button from "../../components/Button";
 import emptyBox from "../../assets/images/empty-box.svg";
 import emptySearch from "../../assets/images/magnifier-question.svg";
+import Modal from "../../components/Modal";
+import Toast from '../../utils/toast';
 
 function Home() {
   const [contacts, setContacts] = useState([]);
@@ -26,6 +28,9 @@ function Home() {
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
+  const [isDeleteModalVisible, setIsDeleteModalVisible] = useState(false);
+  const [contactBeingRemoved, setContactBeingRemoved] = useState(null);
+  const [isLoadingDelete, setIsLoadingDelete] = useState(false);
 
   const filteredSearch = useMemo(
     () =>
@@ -64,10 +69,61 @@ function Home() {
   function handleTryAgain() {
     loadContacts();
   }
+  function handleModalVisible(item){
+    setContactBeingRemoved(item);
+    setIsDeleteModalVisible(true);
+  }
+  function handleModalCancel(){
+    setIsDeleteModalVisible(false);
+    setContactBeingRemoved(null);
+  }
+  async function handleModalConfirm(){
+    try{
+      setIsLoadingDelete(true);
+
+      await ContactServices.deleteContact(contactBeingRemoved.id);
+
+      setContacts((prevState) => prevState.filter(
+        (contact) => contact.id !== contactBeingRemoved.id,
+      ));
+
+      setIsDeleteModalVisible(false);
+
+      Toast({
+        type: 'success',
+        text: 'Contato deletado com sucesso!',
+      });
+    }
+    catch{
+      setIsLoading(false);
+      Toast({
+        type: 'danger',
+        text: 'Ocorreu um erro ao deletar o contato.',
+      });
+    }
+    finally {
+      setIsLoadingDelete(false);
+    }
+  }
 
   return (
     <Container>
       <Loader isLoading={isLoading} />
+
+      <Modal
+        danger
+        visible={isDeleteModalVisible}
+        title={`Tem certeza que deseja remover o contato "${contactBeingRemoved?.name}"?`}
+        confirmLabel="Deletar"
+        onCancel={handleModalCancel}
+        onConfirm={handleModalConfirm}
+        isLoading={isLoadingDelete}
+      >
+        <p>
+          Esta ação não poderá ser desfeita!
+        </p>
+      </Modal>
+
       {contacts.length > 0 && (
         <InputSearchContainer>
           <input
@@ -159,7 +215,7 @@ function Home() {
                 <Link to={`/edit/${item.id}`}>
                   <img src={edit} alt="edit" />
                 </Link>
-                <button type="button">
+                <button type="button" onClick={() => handleModalVisible(item)}>
                   <img src={trash} alt="trash" />
                 </button>
               </div>

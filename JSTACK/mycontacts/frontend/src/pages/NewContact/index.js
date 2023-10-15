@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import PageHeader from '../../components/PageHeader';
 import ContactForm from '../../components/ContactForm';
 import ContactServices from '../../services/ContactServices';
 import toast from '../../utils/toast';
 
 function NewContact() {
+  const contactFormRef = useRef(null);
+
   async function handleSubmit(formData){
     try {
       const contact = {
@@ -15,6 +17,8 @@ function NewContact() {
       };
 
       await ContactServices.createContact(contact);
+
+      contactFormRef.current.resetFields();
 
       toast({
         type: 'success',
@@ -32,6 +36,7 @@ function NewContact() {
     <>
       <PageHeader title="Novo contato" />
       <ContactForm
+        ref={contactFormRef}
         btnLabel='Cadastrar'
         onSubmit={handleSubmit}
       />

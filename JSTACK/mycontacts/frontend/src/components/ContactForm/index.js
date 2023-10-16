@@ -9,16 +9,17 @@ import isEmailValid from '../../utils/isEmailValid';
 import useErrors from '../../hooks/useErrors';
 import formatPhone from '../../utils/formatPhone';
 import CategoryServices from '../../services/CategoryServices';
+import useSafeAsyncState from '../../hooks/useSafeAsyncState';
 
 const ContactForm = forwardRef(({btnLabel, onSubmit}, ref) => {
   const [name,setName] = useState('');
   const [email,setEmail] = useState('');
   const [phone,setPhone] = useState('');
   const [categoryId,setCategoryId] = useState('');
-  const [categories, setCategories] = useState([]);
-  const [hasError, setHasError] = useState(false);
-  const [isLoadingCategories, setIsLoadingCategories] = useState(true);
-  const [isSubmiting, setIsSubmiting] = useState(false);
+  const [categories, setCategories] = useSafeAsyncState([]);
+  const [hasError, setHasError] = useSafeAsyncState(false);
+  const [isLoadingCategories, setIsLoadingCategories] = useSafeAsyncState(true);
+  const [isSubmiting, setIsSubmiting] = useSafeAsyncState(false);
 
   const { setError, removeError, getErrorMessageByFieldName, errors } = useErrors();
 
@@ -57,7 +58,7 @@ const ContactForm = forwardRef(({btnLabel, onSubmit}, ref) => {
     }
 
     loadCategories();
-  }, []);
+  }, [setCategories, setHasError, setIsLoadingCategories]);
 
   function handleNameChange(event){
     setName(event.target.value);

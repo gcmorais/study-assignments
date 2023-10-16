@@ -5,6 +5,7 @@ import { useParams, useHistory } from 'react-router-dom';
 import ContactServices from '../../services/ContactServices';
 import Loader from '../../components/Loader';
 import toast from '../../utils/toast';
+import useIsMounted from '../../hooks/useIsMounted';
 
 function EditContact() {
   const [isLoading, setIsLoading ] = useState(true);
@@ -12,29 +13,34 @@ function EditContact() {
   const contactFormRef = useRef(null);
 
   const { id } = useParams();
-
   const history = useHistory();
+  const isMounted = useIsMounted();
 
   useEffect(() => {
     async function loadContact(){
       try{
 
         const contact = await ContactServices.getContactById(id);
-        contactFormRef.current.setFieldsValues(contact);
 
-        setIsLoading(false);
-        setHeaderName(contact.name);
+        if(isMounted()){
+          contactFormRef.current.setFieldsValues(contact);
+          setIsLoading(false);
+          setHeaderName(contact.name);
+        }
+
       }catch{
-        history.push('/');
-        toast({
-          type: 'danger',
-          text: 'Contato não encontrado!',
-        });
+        if(isMounted()){
+          history.push('/');
+          toast({
+            type: 'danger',
+            text: 'Contato não encontrado!',
+          });
+        }
       }
     }
 
     loadContact();
-  }, [id, history])
+  }, [id, history, isMounted])
 
   async function handleSubmit(formData){
     try {

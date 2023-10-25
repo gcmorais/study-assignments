@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #f6f5fa;
+}
+
+.menu-topo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30rem;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 2px 2px -2px gray;
+  position: fixed;
+
+  .logo{
+    font-size: 12px;
+  }
+
+  .mobile-menu{
+    display: none;
+  }
+  .mobile-menu img{
+    max-width:100px;
+    max-height:50px;
+    cursor: pointer;
+  }
+  
+  .menu{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    padding: 20px;
+    list-style: none;
+    cursor: pointer;
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+
+    .inicio:hover{
+      color: rgb(61, 61, 61);
+    }
+  }
+
+  .menu a{
+    color: rgb(61, 61, 61);
+    text-decoration: none;
+  }
+
+
+  @media screen and (max-width: 922px) {
+    justify-content: space-between;
+    gap: 10rem;
+
+    .mobile-menu{
+      display: block;
+    }
+    .logo{
+      padding: 20px;
+    }
+    .menu{
+      display: none;
+    }
+  }
+}
+
+main{
+  .home-image{
+    width: 100%;
+  }
+  .home-image img{
+    object-fit: cover;
+    max-width:100%;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px -2px gray;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-top: 2rem;
+
+    &+&{
+      margin-top: 4rem;
+    }
+  }
+
+  .container article{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    width: 300px;
+    text-align: left;
+  }
+
+  .container article a{
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #6366f1;
+    padding: 10px;
+  }
+  
+  .container .btnProduct {
+    background-color: rgb(34, 34, 34);
+  }
+  .title-page{
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0 3rem 0;
+    font-size: 20px;
+    color: rgb(41, 41, 41);
+  }
+
+  .camisetas-area{
+    padding-bottom: 5rem;
+  }
+
+  .tenis-area{
+    background-color: white;
+    padding: 2rem 0 5rem 0;
+  }
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  background-color: rgb(34, 34, 34);
+  padding: 5rem;
+  color: white;
+}

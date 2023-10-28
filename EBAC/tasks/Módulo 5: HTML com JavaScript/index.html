@@ -9,13 +9,14 @@
 <body>
   <div class="container">
     <h1>EBAC - Task</h1>
-    <form>
+    <form id="formData">
       <input type="number" id="valorA" placeholder="Digite valor para Número A" />
       <input type="number" id="valorB" placeholder="Digite valor para Número B" />
-      <button type="Submit" onclick="handleSubmit()">Enviar</button>
+      <button type="Submit">Enviar</button>
     </form>
   </div>
-  
+    <p id="invalidForm">Formulário inválido</p>
+    <p id="validForm">Formulário Válido</p>
 </body>
 <script src="./script.js"></script>
 </html>

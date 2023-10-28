@@ -6,6 +6,7 @@
 
 body{
   display: flex;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -35,3 +36,21 @@ body{
   border-radius: 40px;
   cursor: pointer;
 }
+
+#invalidForm{
+  display: none;
+  margin-top: 50px;
+  background-color: red;
+  padding: 20px 80px;
+  color: white;
+  font-weight: 600;
+}
+#validForm{
+  display: none;
+  margin-top: 50px;
+  background-color: rgb(51, 255, 0);
+  padding: 20px 80px;
+  color: white;
+  font-weight: 600;
+}
+

@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background-color: #f6f5fa;
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 10px 20%;
+  background-color: white;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+}
+header h1{
+  color: #22053d;
+}
+header input{
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 20px;
+  width: 40%;
+}
+header ul{
+  display: flex;
+  gap: 50px;
+}
+header ul li {
+  cursor: pointer;
+  list-style: none;
+  font-size: 17px;
+  color: #22053d;
+  font-weight: 500;
+}
+header ul li a{
+  text-decoration: none;
+  color: #22053d;
+}
+.banner{
+  width: 100%;
+  margin-top: 68px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.imagensPromo{
+  width: 70%;
+  margin: 0 auto;
+  gap: 18px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.imagensPromo img{
+  width: 330px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.line{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 100px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+}
+.line p{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+span{
+  margin-top: 6px;
+}
+.icon{
+  width: 20px;
+}
+.items{
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.container{
+  display: flex;
+  flex-flow: column;
+  width: 285px;
+  margin-left: 65px;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+
+  &:last-child{
+    margin-right: 63px;
+  }
+}
+.container p{
+  margin-top: 10px;
+}
+.container s{
+  margin-top: 10px;
+  color: rgba(0,0,0, 0.4)
+}
+.container span {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+}
+.container span strong{
+  font-size: 20px;
+  color: black;
+}
+.headerSection p{
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+}
+.headerSection{
+  display: flex;
+  justify-content: center;
+}
+.promo-banners{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  gap: 52px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  cursor: pointer;
+  padding: 20px;
+}
+.bodySection{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.brands{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.92);
+  height: 200px;
+  color: white;
+  margin-top: 50px;
+}
+@media screen and (max-width: 1400px) {
+  header input{
+    display: none;
+  }
+  .imagensPromo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .imagensPromo img{
+    width: 220px;
+  }
+  .line{
+    width: 82%;
+  }
+  .items{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    padding: 10px;
+  }
+  .promo-banners{
+    gap: 20px;
+  }
+  .promo-banners img{
+    width: 300px;
+  }
+   .container{
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .headerSection p {
+    margin-left: 100px;
+  }
+  .brands img{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  header{
+    padding: 10px 40px;
+  }
+  header ul{
+    gap: 10px;
+  }
+  .imagensPromo img{
+    width: 160px;
+  }
+  .banner{
+    height: 300px;
+  }
+  .promo-banners{
+    flex-wrap: wrap;
+  }
+  .promo-banners img{
+    width: 250px;
+  }
+  .headerSection p {
+    margin-left: 30px;
+  }
+  .line{
+    width: 100%;
+  }
+  .items{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    padding: 10px;
+  }
+  .brands{
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 640px) {
+  .imagensPromo{
+    display: none;
+  }
+  .promo-banners{
+    display: block;
+  }
+  .promo-banners img{
+    width: 100%;
+  }
+  .items{
+    grid-template-columns: repeat(1, 300px);
+  }
+  .brands{
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    padding: 10px;
+  }
+  
+}

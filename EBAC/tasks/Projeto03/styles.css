@@ -50,4 +50,5 @@ body{
 }
 .col-md-3 img{
   height: 130px;
+  object-fit: cover;
 }

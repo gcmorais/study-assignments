@@ -1,0 +1,53 @@
+body{
+  font-family: Roboto, sans-serif;
+}
+
+.navbar{
+  background-color: #fff;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.7);
+}
+
+.nav .nav-link.active,#franqueado button{
+  background-color: #7c3e30 !important;
+  color: #fff !important;
+}
+
+.nav .nav-link, .navbar-brand{
+  color: #7c3e30 !important;
+}
+
+.navbar-toggler{
+  background-color: #ffeae6;
+}
+
+.carousel-item img{
+  filter: brightness(50%);
+}
+
+.section-title{
+  font-family: Pacifico, sans-serif;
+  color: #7c3e30;
+}
+.section-subtitle{
+  font-family: Pacifico, sans-serif;
+  color: #80584f;
+}
+#inicio{
+  background-color: #f3f3f3;
+}
+#acompanhamentos{
+  background-color: #f3f3f3;
+}
+.colored{
+  color: #523832;
+}
+.social-links li{
+  list-style: none;
+  display: inline;
+}
+.social-links li a{
+  text-decoration: none;
+}
+.col-md-3 img{
+  height: 130px;
+}

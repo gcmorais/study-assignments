@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Projeto 03 desenvolvido junto a EBAC." />
+    <title>Projeto03</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+      <div class="container">
+        <h1 class="navbar-brand m-0 section-title">Empório Cafeteria</h1>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu-navegacao"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav
+          class="navbar-collapse collapse justify-content-end mt-sm-2"
+          id="menu-navegacao"
+        >
+          <ul class="nav nav-pills d-block d-md-flex">
+            <li class="nav-item fw-bold">
+              <a href="#inicio" class="nav-link">
+                <i class="bi bi-house-door me-1"></i>
+                Início
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#cafes" class="nav-link">
+                <i class="bi bi-calendar-check me-1"></i>
+                Cafés
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#acompanhamentos" class="nav-link">
+                <i class="bi bi-card-text me-1"></i>
+                Acompanhamentos
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#franqueado" class="nav-link">
+                <i class="bi bi-chat-left-text me-1"></i>
+                Seja um franqueado
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main data-bs-spy="scroll" data-bs-target="#cabecalho">
+      <section id="inicio">
+        <div
+          id="carouselToggle"
+          class="carousel carousel-fade slide"
+          data-bs-ride="carousel"
+          style="z-index: 0"
+        >
+          <div class="carousel-inner">
+            <div data-bs-interval="4000" class="carousel-item active">
+              <img
+                src="assets/foto1.webp"
+                class="w-100"
+                style="
+                  height: 600px;
+                  object-fit: cover;
+                  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+                "
+                alt="imagem-slide"
+              />
+            </div>
+            <div data-bs-interval="4000" class="carousel-item">
+              <img
+                src="assets/foto2.avif"
+                class="w-100"
+                style="
+                  height: 600px;
+                  object-fit: cover;
+                  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+                "
+                alt="imagem-slide"
+              />
+            </div>
+            <div data-bs-interval="4000" class="carousel-item">
+              <img
+                src="assets/foto3.avif"
+                class="w-100"
+                style="
+                  height: 600px;
+                  object-fit: cover;
+                  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+                "
+                alt="imagem-slide"
+              />
+            </div>
+          </div>
+          <button
+            data-bs-target="#carouselToggle"
+            data-bs-slide="prev"
+            class="carousel-control-prev"
+            type="button"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            data-bs-target="#carouselToggle"
+            data-bs-slide="next"
+            class="carousel-control-next"
+            type="button"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+        <div class="pt-5 pb-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <img
+                  src="./assets/xicara.avif"
+                  class="d-block w-100 rounded"
+                  alt="Foto de amostra do café"
+                />
+              </div>
+              <div class="col-md-7">
+                <h2 class="section-title">Sobre a cafeteria</h2>
+                <p>
+                  Criar momentos especiais é a principal missão da Empório, por
+                  isso todos os nossos cafés são desenvolvidos com muito cuidado
+                  e carinho - buscando proporcionar a melhor experiência
+                  gastronômica para você. Seja na correria do dia-a-dia ou em um
+                  final de semana especial com os amigos, a vida fica muito
+                  melhor com um café saboroso.
+                </p>
+                <h3 class="section-title">Sobre o espaço</h3>
+                <p>
+                  Compartilhe um café da manhã em um local aconchegante com as
+                  pessoas mais especiais para você. Escolha entre diversas
+                  opções de café da manhã com um menu que aproxima diferentes
+                  nacionalidades em uma culinária deliciosa e feita com muito
+                  amor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="cafes" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title text-center mb-5">Nossos cafés</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img
+                src="/assets/cafe-arara.webp"
+                alt="Café Arara"
+                class="w-100 rounded"
+              />
+              <h3 class="section-subtitle text-center mt-3 mb-3">
+                <i class="bi bi-cup-hot-fill"></i>
+                Café Arara
+              </h3>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="/assets/cafe-acaua.webp"
+                alt="Café Acauã"
+                class="w-100 rounded"
+              />
+              <h3 class="section-subtitle text-center mt-3 mb-3">
+                <i class="bi bi-cup-hot-fill"></i>
+                Café Acauã
+              </h3>
+            </div>
+            <div class="col-md-4">
+              <img
+                src="/assets/cafe-japy.webp"
+                alt="Café Japy"
+                class="w-100 rounded"
+              />
+              <h3 class="section-subtitle text-center mt-3 mb-3">
+                <i class="bi bi-cup-hot-fill"></i>
+                Café Japy
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="acompanhamentos" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title text-center mb-3">
+              Acompanhamentos Recomendados
+            </h2>
+          </div>
+          <div class="row mt-5">
+            <aside class="col-md-2">
+              <nav class="nav nav-pills flex-column">
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#arara"
+                  class="fw-bold text-start nav-link active"
+                >
+                  Café Arara
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#acaua"
+                  class="fw-bold text-start nav-link"
+                >
+                  Café Acauã
+                </button>
+                <button
+                  type="button"
+                  data-bs-toggle="tab"
+                  data-bs-target="#japy"
+                  class="fw-bold text-start nav-link"
+                >
+                  Café Japy
+                </button>
+              </nav>
+            </aside>
+            <div class="col-md-10">
+              <div class="tab-content">
+                <div class="tab-pane active" id="arara">
+                  <div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="./assets/pao-de-forma.png"
+                          alt="pão de forma"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Misto Quente</h5>
+                        <p>
+                          O misto quente é o sanduíche perfeito para o café da
+                          manhã, lanches rápidos e até para refeições maiores,
+                          basta acrescentar uma salada ao prato.
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/bolo-fuba.png"
+                          alt="Bolo de fubá"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Bolo de fubá</h5>
+                        <p>
+                          O bolo de fubá é uma ótima opção de acompanhamento
+                          para o seu café. Já imaginou um bolo de fubá fofinho
+                          saindo do forno? Uma delícia!
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="./assets/pao-de-queijo.png"
+                          alt="pão de queijo"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Pão de queijo</h5>
+                        <p>
+                          O costume de tomar café acompanhado de um pão de
+                          queijo começou em Minas Gerais e se popularizou em
+                          outros estados. Afinal, ninguém resiste a um pão de
+                          queijo quentinho.
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="./assets/bolinho-de-chuva.png"
+                          alt="bolinho de chuva"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Bolinho de chuva</h5>
+                        <p>
+                          Os famosos bolinhos de chuva polvilhados com açúcar e
+                          canela também são uma ótima pedida para acompanhar o
+                          café da tarde.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="acaua">
+                  <div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/pao-batata.jpg"
+                          alt="pão de batata"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Pão de batata</h5>
+                        <p>
+                          Um pão de batata quentinho também tem seu valor! Com
+                          bastante recheio e massa fofinha, resistir é quase
+                          impossível
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/churros.png"
+                          alt="churros"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">
+                          Churros de Doce de leite
+                        </h5>
+                        <p>
+                          Ao contrário do pão de batata, um churros com doce de
+                          leite não tem nada de leve. Essa é uma ótima opção
+                          para quem está afim de degustar um doce junto com o
+                          cafézinho.
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/chocolate.png"
+                          alt="chocolate"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Chocolate</h5>
+                        <p>
+                          O chocolate, assim como o café, é uma ótima pedida
+                          depois do almoço. Mas, que tal unir essas duas opções?
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/torta.png"
+                          alt="torta"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">
+                          Torta de frango com palmito
+                        </h5>
+                        <p>
+                          Por último, mas não menos importante, um dos melhores
+                          acompanhamentos para café é a torta de frango com
+                          palmito.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="japy">
+                  <div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/torta.png"
+                          alt="torta"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">
+                          Torta de frango com palmito
+                        </h5>
+                        <p>
+                          Por último, mas não menos importante, um dos melhores
+                          acompanhamentos para café é a torta de frango com
+                          palmito.
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/bolo-fuba.png"
+                          alt="Bolo de fubá"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Bolo de fubá</h5>
+                        <p>
+                          O bolo de fubá é uma ótima opção de acompanhamento
+                          para o seu café. Já imaginou um bolo de fubá fofinho
+                          saindo do forno? Uma delícia!
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/pao-batata.jpg"
+                          alt="pão de batata"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">Pão de batata</h5>
+                        <p>
+                          Um pão de batata quentinho também tem seu valor! Com
+                          bastante recheio e massa fofinha, resistir é quase
+                          impossível
+                        </p>
+                      </div>
+                      <div class="col-md-3">
+                        <img
+                          src="/assets/churros.png"
+                          alt="churros"
+                          class="d-block w-100 rounded"
+                        />
+                        <h5 class="section-subtitle mt-3">
+                          Churros de Doce de leite
+                        </h5>
+                        <p>
+                          Ao contrário do pão de batata, um churros com doce de
+                          leite não tem nada de leve. Essa é uma ótima opção
+                          para quem está afim de degustar um doce junto com o
+                          cafézinho.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="franqueado" class="pt-5 pb-5">
+        <div class="container">
+          <div class="row">
+            <h2 class="section-title text-center">Seja um franqueado</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-7">
+              <form>
+                <div class="mb-3">
+                  <label for="nome" class="form-label fw-bold colored"
+                    >Seu nome</label
+                  >
+                  <input type="text" id="nome" class="form-control" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label fw-bold colored"
+                    >Seu email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="telefone" class="form-label fw-bold colored"
+                    >Seu telefone</label
+                  >
+                  <input
+                    type="tel"
+                    id="telefone"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="mensagem" class="form-label fw-bold colored"
+                    >Mensagem</label
+                  >
+                  <textarea class="form-control" id="mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn fw-bold">Enviar</button>
+              </form>
+            </div>
+            <div class="col-md-5">
+              <div class="row mt-4">
+                <h3 class="section-title fs-4">- Redes Sociais</h3>
+                <ul class="social-links">
+                  <li class="fs-5">
+                    <a href="#">
+                      <i class="bi bi-facebook colored"></i>
+                    </a>
+                  </li>
+                  <li class="fs-5 ms-1 me-1">
+                    <a href="#">
+                      <i class="bi bi-instagram colored"></i>
+                    </a>
+                  </li>
+                  <li class="fs-5">
+                    <a href="#">
+                      <i class="bi bi-whatsapp colored"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="row mt-4">
+                <h3 class="section-title fs-4">- Endereço</h3>
+                <p>
+                  Rua Benjamin de oliveira, 93 - Jardim Santana - São Paulo - SP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="w-100 d-flex justify-content-center"
+      style="
+        background-color: #351912;
+        color: white;
+        height: 200px;
+        align-items: center;
+        text-align: center;
+      "
+    >
+      <p>
+        Empório Cafeteria
+        <br />
+        Desenvolvido por: Guilherme C.Morais - 2023
+      </p>
+    </footer>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+</html>

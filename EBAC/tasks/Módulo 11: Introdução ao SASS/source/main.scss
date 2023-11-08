@@ -1,0 +1,37 @@
+@use 'config/reset';
+@use 'config/colors';
+@use 'pages/products';
+@use 'pages/menu';
+@use 'config/breakpoints';
+
+body {
+  background-color: colors.$background-main;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: colors.$background-header;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+section {
+  padding: 56px 0;
+}

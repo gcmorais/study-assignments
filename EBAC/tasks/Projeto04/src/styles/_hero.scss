@@ -1,0 +1,75 @@
+@use 'variaveis';
+
+.hero{
+  padding: 10vw;
+  min-height: 80vh;
+  background-image: linear-gradient(
+          rgba(0, 0, 0, 0.72), 
+          rgba(0, 0, 0, 0.72)
+        ),url(https://images7.alphacoders.com/565/565053.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: left;
+
+  &__content{
+    max-width: 640px;
+
+    button{
+      width: 50%;
+      margin-top: 2vw;
+      padding: 20px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      color: variaveis.$corTextoSecundario;
+      background-color: #6421ff;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    &__combos{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+      list-style: none;
+      
+      img{
+        width: 150px;
+      }
+    }
+
+    &__line p{
+      color: white;
+      padding: 10px;
+      border-bottom: 1px solid rgba(87, 87, 87,0.4);
+      border-top: 1px solid rgba(87, 87, 87,0.4);
+      margin: 20px 0;
+    }
+  }
+
+  .title--bg{
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+  .hero{
+    &__content{
+      button{
+        width: 100%;
+      }
+
+      &__combos{
+        justify-content: center;
+      }
+    }
+  }
+}

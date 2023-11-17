@@ -1,0 +1,65 @@
+.partyinfos-section {
+  padding: 0 20vw;
+
+  &__container{
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+
+    img{
+      width: 50%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    &+&{
+      flex-direction: row-reverse;
+
+      div{
+        h3,p{
+          text-align: right;
+        }
+      }
+    }
+
+    div{
+      width: 50%;
+
+      h3{
+        font-size: 30px;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-top:1px solid rgba(255,255,255, 0.3);
+        border-bottom:1px solid rgba(255,255,255, 0.3);
+        color: rgba(255,255,255,1);
+      }
+
+      p{
+        color: rgba(255,255,255,0.6);
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .partyinfos-section{
+    padding: 0 8vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .partyinfos-section{
+    &__container{
+      display: block;
+
+      img{
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      
+      div{
+       width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use 'colors';
+
+.hero-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column;
+  width: 100%;
+  background-image: linear-gradient(
+   rgba(0, 0, 0, 0.72), 
+   rgba(0, 0, 0, 0.72)),
+    url(https://i.pinimg.com/originals/d6/64/db/d664dbe3991339516ca7c37d2426be90.jpg)
+  ;
+  padding: 0 10vw;
+
+  img{
+    width: 250px;
+    margin-top: 80px;
+  }
+
+  h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin: 100px;
+  }
+
+  &__footer{
+    display: flex;
+    text-align: left;
+    gap: 120px;
+    background-color: aliceblue;
+    padding: 25px;
+    margin-bottom: 80px;
+
+    div h3{
+      color: colors.$corTextoPrincipal;
+      margin-bottom: 10px;
+    }
+    div p{
+      color: colors.$corTextoSecundario;
+    }
+    button{
+      padding: 0 20px;
+      border: none;
+      background-color: #113a71;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-section{
+    height: 100%;
+
+    h1 {
+      font-size: 32px;
+      margin: 50px;
+    }
+
+    &__footer{
+      display: block;
+      margin-top: 50px;
+
+      button{
+        padding: 20px;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      div h3{
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+}

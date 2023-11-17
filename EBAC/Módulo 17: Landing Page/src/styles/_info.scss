@@ -1,0 +1,39 @@
+.info-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10vw;
+  height: 12vw;
+  background-color: #2c2c2c;
+  
+  div h1{
+    color: #FFA52A;
+    font-size: 49px;
+    font-weight: 600;
+  }
+  div p{
+    text-align: center;
+    color: #E9E9E9;
+    font-size: 23px;
+    font-weight: 400;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .info-section{
+    display: table;
+    height: 0;
+    width: 100%;
+
+
+    div h1{
+      text-align: center;
+      margin-top: 30px;
+    }
+    div p{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+}

@@ -1,4 +1,7 @@
 # DIO - Trilha .NET - Fundamentos
+
+[Download do exercício](https://drive.google.com/file/d/1ITpJHevk15_ck9KvmKP4rhmF_vpB8Uu3/view?usp=drive_link)
+
 www.dio.me
 
 ## Desafio de projeto

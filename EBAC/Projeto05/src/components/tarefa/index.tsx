@@ -1,37 +1,58 @@
-import { remover, editar } from '../../store/reducers/tarefas'
-import { BotaoSalvar } from '../../styles'
-import { useEffect, useState } from 'react'
-import * as S from './styles'
-import { useDispatch } from 'react-redux'
-import TarefaClass from '../../models/Tarefa'
+import { remover, editar, alteraStatus } from "../../store/reducers/tarefas";
+import { Botao, BotaoSalvar } from "../../styles";
+import { ChangeEvent, useEffect, useState } from "react";
+import * as S from "./styles";
+import { useDispatch } from "react-redux";
+import TarefaClass from "../../models/Tarefa";
+import * as enums from "../../utils/enums/tarefa";
 
-type Props = TarefaClass
+type Props = TarefaClass;
 
 const Tarefa = ({
   titulo,
   prioridade,
   status,
   descricao: descricaoOriginal,
-  id
+  id,
 }: Props) => {
-  const dispatch = useDispatch()
-  const [estaEditando, setEstaEditando] = useState(false)
-  const [descricao, setDescricao] = useState('')
+  const dispatch = useDispatch();
+  const [estaEditando, setEstaEditando] = useState(false);
+  const [descricao, setDescricao] = useState("");
 
   useEffect(() => {
     if (descricaoOriginal.length > 0) {
-      setDescricao(descricaoOriginal)
+      setDescricao(descricaoOriginal);
     }
-  }, [descricaoOriginal])
+  }, [descricaoOriginal]);
 
   function cancelarEdicao() {
-    setEstaEditando(false)
-    setDescricao(descricaoOriginal)
+    setEstaEditando(false);
+    setDescricao(descricaoOriginal);
+  }
+
+  function alteraStatusTarefa(evento: ChangeEvent<HTMLInputElement>) {
+    dispatch(
+      alteraStatus({
+        id,
+        finalizado: evento.target.checked,
+      })
+    );
   }
 
   return (
     <S.Card>
-      <S.Titulo>{titulo}</S.Titulo>
+      <label htmlFor={titulo}>
+        <input
+          type="checkbox"
+          id={titulo}
+          checked={status === enums.Status.CONCLUIDA}
+          onChange={alteraStatusTarefa}
+        />
+        <S.Titulo>
+          {estaEditando && <em>Editando: </em>}
+          {titulo}
+        </S.Titulo>
+      </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
         {prioridade}
       </S.Tag>
@@ -54,10 +75,10 @@ const Tarefa = ({
                     prioridade,
                     status,
                     titulo,
-                    id
+                    id,
                   })
-                )
-                setEstaEditando(false)
+                );
+                setEstaEditando(false);
               }}
             >
               Salvar
@@ -68,7 +89,7 @@ const Tarefa = ({
           </>
         ) : (
           <>
-            <S.Botao onClick={() => setEstaEditando(true)}>Editar</S.Botao>
+            <Botao onClick={() => setEstaEditando(true)}>Editar</Botao>
             <S.BotaoCancelarRemover onClick={() => dispatch(remover(id))}>
               Remover
             </S.BotaoCancelarRemover>
@@ -76,7 +97,7 @@ const Tarefa = ({
         )}
       </S.BarraAcoes>
     </S.Card>
-  )
-}
+  );
+};
 
-export default Tarefa
+export default Tarefa;

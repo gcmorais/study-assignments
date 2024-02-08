@@ -1,34 +1,31 @@
-import React, { FormEvent, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import { MainContainer, Titulo, Campo, BotaoSalvar } from '../../styles'
-import { Form, Opcoes, Opcao } from './styles'
-import * as enums from '../../utils/enums/tarefa'
-import Tarefa from '../../models/Tarefa'
-import { cadastrar } from '../../store/reducers/tarefas'
+import React, { FormEvent, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { MainContainer, Titulo, Campo, BotaoSalvar } from "../../styles";
+import { Form, Opcoes, Opcao } from "./styles";
+import * as enums from "../../utils/enums/tarefa";
+import { cadastrar } from "../../store/reducers/tarefas";
 
 function Formulario() {
-  const dispatch = useDispatch()
-  const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const [titulo, setTitulo] = useState('')
-  const [descricao, setDescricao] = useState('')
-  const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL)
+  const [titulo, setTitulo] = useState("");
+  const [descricao, setDescricao] = useState("");
+  const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL);
 
   const cadastrarTarefa = (e: FormEvent) => {
-    e.preventDefault()
-
-    const tarefaParaAdicionar = new Tarefa(
-      titulo,
-      prioridade,
-      enums.Status.PENDENTE,
-      descricao,
-      9
-    )
-
-    dispatch(cadastrar(tarefaParaAdicionar))
-    navigate('/')
-  }
+    e.preventDefault();
+    dispatch(
+      cadastrar({
+        titulo,
+        descricao,
+        prioridade,
+        status: enums.Status.PENDENTE,
+      })
+    );
+    navigate("/");
+  };
 
   return (
     <MainContainer>
@@ -69,7 +66,7 @@ function Formulario() {
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
       </Form>
     </MainContainer>
-  )
+  );
 }
 
-export default Formulario
+export default Formulario;

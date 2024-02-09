@@ -34,12 +34,18 @@ export const Card = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+
+    p {
+      opacity: 40%;
+      font-size: 13px;
+    }
   }
 `;
-export const Titulo = styled.h3`
+export const Titulo = styled.input`
+  background-color: #fff;
+  border: none;
   font-size: 18px;
   font-weight: bold;
-  margin-left: 8px;
 `;
 export const Tag = styled.span<TagProps>`
   padding: 4px 8px;
@@ -51,15 +57,13 @@ export const Tag = styled.span<TagProps>`
   margin-right: 16px;
   display: inline-block;
 `;
-export const Descricao = styled.textarea`
+export const Descricao = styled.input`
   color: #8b8b8b;
   font-size: 14px;
   line-height: 24px;
   font-family: "Roboto Mono", monospace;
   display: block;
   width: 100%;
-  margin-bottom: 16px;
-  margin-top: 16px;
   resize: none;
   border: none;
   background-color: transparent;

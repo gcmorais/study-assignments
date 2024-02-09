@@ -1,5 +1,5 @@
 import React from "react";
-import BarraLateral from "../../containers/BarraLateral";
+import BarraLateral from "../../containers/Header";
 import Formulario from "../../containers/Formulario";
 
 function Cadastro() {

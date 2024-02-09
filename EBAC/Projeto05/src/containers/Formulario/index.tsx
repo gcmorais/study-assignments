@@ -10,7 +10,8 @@ function Formulario() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [titulo, setTitulo] = useState("");
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
   const [descricao, setDescricao] = useState("");
   const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL);
 
@@ -18,10 +19,9 @@ function Formulario() {
     e.preventDefault();
     dispatch(
       cadastrar({
-        titulo,
+        nome,
+        email,
         descricao,
-        prioridade,
-        status: enums.Status.PENDENTE,
       })
     );
     navigate("/");
@@ -29,39 +29,33 @@ function Formulario() {
 
   return (
     <MainContainer>
-      <Titulo>Nova tarefa</Titulo>
+      <Titulo>Novo contato</Titulo>
       <Form onSubmit={cadastrarTarefa}>
         <Campo
-          value={titulo}
-          onChange={(e) => setTitulo(e.target.value)}
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
           type="text"
-          placeholder="titulo"
+          placeholder="Nome"
         />
         <Campo
-          value={descricao}
-          onChange={(e) => setDescricao(e.target.value)}
-          as="textarea"
-          placeholder="descrição"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          type="email"
+          placeholder="Email"
+          pattern=".+@.+.com"
         />
 
-        <Opcoes>
-          <p>Prioridade</p>
-          {Object.values(enums.Prioridade).map((prioridade) => (
-            <Opcao key={prioridade}>
-              <input
-                value={prioridade}
-                name="prioridade"
-                type="radio"
-                onChange={(e) =>
-                  setPrioridade(e.target.value as enums.Prioridade)
-                }
-                id={prioridade}
-                defaultChecked={prioridade === enums.Prioridade.NORMAL}
-              />
-              <label htmlFor={prioridade}>{prioridade}</label>
-            </Opcao>
-          ))}
-        </Opcoes>
+        <label>
+          <p>Máscara do input: 00 0000-0000</p>
+          <Campo
+            value={descricao}
+            onChange={(e) => setDescricao(e.target.value)}
+            type="tel"
+            pattern="[0-9]{2} [0-9]{4}-[0-9]{4}"
+            placeholder="00 0000-0000"
+            required
+          />
+        </label>
 
         <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
       </Form>

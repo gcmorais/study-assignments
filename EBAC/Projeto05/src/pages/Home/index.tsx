@@ -1,5 +1,5 @@
 import React from "react";
-import BarraLateral from "../../containers/BarraLateral";
+import BarraLateral from "../../containers/Header";
 import ListaDeTarefas from "../../containers/ListaDeTarefas";
 import BotaoAdicionar from "../../components/BotaoAdicionar";
 

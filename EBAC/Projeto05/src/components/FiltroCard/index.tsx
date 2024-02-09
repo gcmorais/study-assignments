@@ -21,16 +21,6 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
     return mesmoCriterio && mesmoValor
   }
 
-  const contarTarefas = () => {
-    if (criterio === 'todas') return tarefas.itens.length
-    if (criterio === 'prioridade') {
-      return tarefas.itens.filter((item) => item.prioridade === valor).length
-    }
-    if (criterio === 'status') {
-      return tarefas.itens.filter((item) => item.status === valor).length
-    }
-  }
-
   const filtrar = () => {
     dispatch(
       alterarFiltro({
@@ -40,12 +30,10 @@ const FiltroCard = ({ legenda, criterio, valor }: Props) => {
     )
   }
 
-  const contador = contarTarefas()
   const ativo = verificaEstaAtivo()
 
   return (
     <S.Card ativo={ativo} onClick={filtrar}>
-      <S.Contador>{contador}</S.Contador>
       <S.Label>{legenda}</S.Label>
     </S.Card>
   )

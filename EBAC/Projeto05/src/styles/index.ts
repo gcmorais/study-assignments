@@ -13,23 +13,30 @@ const EstiloGlobal = createGlobalStyle`
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 224px auto;
+  grid-template-columns: 224px 1;
 `;
 
 export const MainContainer = styled.main`
-  padding: 0 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
   height: 100vh;
-  overflow-y: scroll;
+
+  ul {
+    width: 40%;
+    min-width: 400px;
+  }
 `;
 
 export const Campo = styled.input`
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   font-weight: bold;
   background-color: #fff;
   color: #666666;
   border-color: #666666;
+  margin-bottom: 20px;
 `;
 
 export const Titulo = styled.h2`

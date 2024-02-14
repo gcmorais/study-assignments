@@ -8,26 +8,24 @@ describe("Teste para o componente PostComment", () => {
     expect(screen.getByText("Comentar")).toBeInTheDocument();
   });
 
-  it("Deve adicionar: Ir na feira aos domingos", () => {
-    render(<PostComment />);
+  it("Deve adicionar 2 tarefas", () => {
+    const { debug } = render(<PostComment />);
     fireEvent.change(screen.getByTestId("campo-tarefa"), {
       target: {
         value: "Ir na feira aos domingos",
       },
     });
     fireEvent.click(screen.getByTestId("btn-cadastrar"));
-    expect(screen.getByText("Ir na feira aos domingos")).toBeInTheDocument();
-  });
-  it("Deve adicionar: Estudar módulo de Testes na EBAC", () => {
-    render(<PostComment />);
+
     fireEvent.change(screen.getByTestId("campo-tarefa"), {
       target: {
         value: "Estudar módulo de Testes na EBAC",
       },
     });
     fireEvent.click(screen.getByTestId("btn-cadastrar"));
-    expect(
-      screen.getByText("Estudar módulo de Testes na EBAC")
-    ).toBeInTheDocument();
+
+    debug();
+
+    expect(screen.getAllByTestId("list-comment")).toHaveLength(2);
   });
 });
